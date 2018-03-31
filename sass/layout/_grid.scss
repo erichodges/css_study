@@ -1,0 +1,54 @@
+.row {
+  max-width: $grid-width;
+  
+  margin: 0 auto;
+
+  &:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+  &:not(:last-child) {
+      margin-bottom: $gutter-vertical;
+  }
+
+  [class*="col-"] {
+      float: left;      
+      
+      &:not(:last-child) {
+          margin-right: $gutter-horizontal;
+      }
+  }
+
+  // This part creates the code for each col.
+  // E.g: .col-1-of-3
+  @for $cols from 2 through 4 {
+      @for $col from 1 through $cols {
+          .col-#{$col}-of-#{$cols} {
+              width: calc((100% / #{$cols} * #{$col}));
+              
+              // For the last child of the row to
+              // preserve the full width.
+              // A little bit overkilled, sorry.
+              &:not(:last-child) {
+                  width: calc((100% / #{$cols} * #{$col}) - #{$gutter-horizontal});
+              }
+          }
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
