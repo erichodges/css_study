@@ -26,7 +26,7 @@
   @for $cols from 2 through 4 {
       @for $col from 1 through $cols {
           .col-#{$col}-of-#{$cols} {
-              width: calc((100% / #{$cols} * #{$col}));
+              width: calc((100% / #{$cols} * #{$col}) - #{$gutter-horizontal});
               
               // For the last child of the row to
               // preserve the full width.
