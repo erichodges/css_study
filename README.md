@@ -1,8 +1,8 @@
-Terminal 1:
-npm run compile:sass -w
+Dev
+npm run start
 
-Terminal 2:
-live-server
+Build:
+npm run build:css
 
 CSS notes:
 cubic-bezier.com
