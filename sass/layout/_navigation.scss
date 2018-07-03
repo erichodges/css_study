@@ -113,7 +113,7 @@
     left: 0;
   }
 
-  //ICON
+  //HAMBURGER ICON   class="navigation__icon"
   &__icon {
     position: relative;
     margin-top: 3.5rem;
@@ -140,13 +140,13 @@
 
   }
 
-  &__button:hover &__icon::before {
-    top: -1rem;
-  }
+  // &__button:hover &__icon::before {
+  //   top: -1rem;
+  // }
 
-  &__button:hover &__icon::after {
-    top: 1rem;
-  }
+  // &__button:hover &__icon::after {
+  //   top: 1rem;
+  // }
 
   &__checkbox:checked + &__button &__icon {
     background-color: transparent;
@@ -154,11 +154,11 @@
 
   &__checkbox:checked + &__button &__icon::before {
     top: 0;
-    transform: rotate(135deg);
+    transform: rotate(45deg);
   }  
 
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
-    transform: rotate(-135deg);
+    transform: rotate(-45deg);
   } 
 }
